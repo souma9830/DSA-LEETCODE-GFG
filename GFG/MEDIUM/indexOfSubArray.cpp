@@ -21,8 +21,8 @@ int main(){
         for(int j=i;j<n;j++){
             sum+=arr[j];
             if(sum==target){
-                cout<<i<<" ";
-                cout<<j;
+                cout<<i+1<<" ";
+                cout<<j+1;
                 return 0;
             }
             
