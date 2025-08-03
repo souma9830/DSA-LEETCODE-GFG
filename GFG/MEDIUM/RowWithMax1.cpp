@@ -32,3 +32,32 @@ int main(){
 
     cout<<"The row is "<<idx;
 }
+
+//for gfg
+// User function template for C++
+class Solution {
+  public:
+    int rowWithMax1s(vector<vector<int>> &arr) {
+        // code here
+        int n=arr.size();
+        if(n==0) return -1;
+        int m=arr[0].size();
+        if(m==0) return -1;
+        int mcount=0;
+        int idx=-1;
+        for(int i=0;i<n;i++){
+            int count=0;
+            for(int j=0;j<m;j++){
+                if(arr[i][j]==1){
+                    count++;
+                }
+            }
+            if(count>mcount){
+                mcount=count;
+                idx=i;
+            }
+        }
+        return idx;
+        
+    }
+};
