@@ -11,13 +11,16 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    int product=1;
+    int sign=1;
     for(int i=0;i<n;i++){
-        product*=v[i];
+        if(v[i]<0) sign*=-1;
+        if(v[i]==0) {
+            cout<<"0";
+            break;
+        }
     }
-    if(product<0) cout<<"negetive";
-    else if(product==0) cout<<"zero";
-    else cout<<"Positive";
+        if(sign>0) cout<<"1";
+        else cout<<"-1";
 }
 
 
@@ -25,16 +28,16 @@ int main(){
 //leetcode
 
 
-class Solution {
-public:
-    int arraySign(vector<int>& nums) {
-        long long product=1;
-        for(int i=0;i<nums.size();i++){
-            if(nums[i]<0){
-                product*=-1;
-            }
-            if(nums[i]==0) return 0;
-        }
-        return product;
-    }
-};
+// class Solution {
+// public:
+//     int arraySign(vector<int>& nums) {
+//         long long product=1;
+//         for(int i=0;i<nums.size();i++){
+//             if(nums[i]<0){
+//                 product*=-1;
+//             }
+//             if(nums[i]==0) return 0;
+//         }
+//         return product;
+//     }
+// };
